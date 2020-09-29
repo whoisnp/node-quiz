@@ -9,8 +9,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //* mongoDB connect
-const connectionString =
-  "mongodb+srv://whoisNP:NithyaPrakash123@cluster0-gihtk.mongodb.net/test?retryWrites=true&w=majority";
+const connectionString = "your mongo db connection string";
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
   .then((client) => {
     console.log("Connected to Database");
