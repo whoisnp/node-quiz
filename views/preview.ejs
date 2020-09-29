@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Preview</title>
+</head>
+<body>
+    <h3 class="center blue-text">Preview</h3>
+    <div class="row container">
+        <ul class="question collection left col l12 m12 s12">
+            <% for(var i=0; i<question.length; i++){ %>
+                <li class="question collection-item">
+                    <div>
+                        <h4>
+                            <%= question[i].question %>
+                            <a href="/edit/<%= question[i]._id %>" class="secondary-content"><i class="material-icons">edit</i></a>
+                        </h4>
+                    </div>
+                    <div>
+                        <h5>
+                            <%= question[i].choice1 %>
+                        </h5>
+                    </div>
+                    <div>
+                        <h5>
+                            <%= question[i].choice2 %>
+                        </h5>
+                    </div>
+                    <div>
+                        <h5>
+                            <%= question[i].choice3 %>    
+                        </h5>
+                    </div>
+                    <div>
+                        <h5>
+                            <%= question[i].choice4 %>
+                        </h5>
+                    </div>
+                </li>
+            <% } %>     
+        </ul>
+    </div>
+</body>
+</html>

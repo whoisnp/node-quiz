@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Quiz update</title>
+</head>
+<body>
+    <h3 class="center-align">May Node and Express be with you.</h3>
+    <div class="row container">
+        <form action="/add" method="POST" class="col s12">
+            <div class="input-field col l12 m12 s12">
+                <textarea class="materialize-textarea" type="text" name="question"></textarea>
+                <label for="question">Question</label>
+            </div>
+            <div class="input-field container col l6 m6 s12">
+                <textarea class="materialize-textarea" type="text" name="choice1" data-number="1"></textarea>
+                <label for="choice1">Option -A</label>
+            </div>
+            <div class="input-field container col l6 m6 s12">
+                <textarea class="materialize-textarea" type="text" name="choice2" data-number="2"></textarea>
+                <label for="choice1">Option -B</label>
+            </div>
+            <div class="input-field container col l6 m6 s12">
+                <textarea class="materialize-textarea" type="text"  name="choice3" data-number="3"></textarea>
+                <label for="choice1">Option -C</label>
+            </div>
+            <div class="input-field container col l6 m6 s12">
+                <textarea class="materialize-textarea" type="text"  name="choice4" data-number="4"></textarea>
+                <label for="choice1">Option -D</label>
+            </div>
+            <div class="input-field container col l10 m10 s12 offset-4">
+                <input type="number" name="answer" >
+                <label for="choice1">Answer</label>
+            </div>
+            <div class="container center ">
+                <hr class="red">
+                <button class="btn wave-effect" type="submit">ADD Question</button>
+            </div>
+        </form>
+    </div>
+
+    
+
+    
+</body>
+</html>

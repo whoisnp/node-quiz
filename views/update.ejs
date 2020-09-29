@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Update</title>
+</head>
+<body>
+    <div class="row container">
+        <ul class="question collection left col l12 m12 s12">
+            <% for(var i=0; i<question.length; i++){ %>
+                <% if(question[i]._id == id){ %> 
+                <div class="row container">
+                    <form action="/edit" method="POST" class="col s12">
+                        <div class="input-field col l12 m12 s12">
+                            <textarea class="materialize-textarea" type="text" name="question"><%= question[i].question %></textarea>
+                            <label for="question">Question</label>
+                        </div>
+                        <div class="input-field container col l6 m6 s12">
+                            <textarea class="materialize-textarea" type="text" name="choice1" data-number="1"><%= question[i].choice1 %></textarea>
+                            <label for="choice1">Option -A</label>
+                        </div>
+                        <div class="input-field container col l6 m6 s12">
+                            <textarea class="materialize-textarea" type="text"  name="choice2" data-number="2"><%= question[i].choice2 %></textarea>
+                            <label for="choice1">Option -B</label>
+                        </div>
+                        <div class="input-field container col l6 m6 s12">
+                            <textarea class="materialize-textarea" type="text"  name="choice3" data-number="3"><%= question[i].choice3 %></textarea>
+                            <label for="choice1">Option -C</label>
+                        </div>
+                        <div class="input-field container col l6 m6 s12">
+                            <textarea class="materialize-textarea" type="text"  name="choice4" data-number="4"><%= question[i].choice4 %></textarea>
+                            <label for="choice1">Option -D</label>
+                        </div>
+                        <div class="input-field container col l10 m10 s12 offset-4">
+                            <input type="number" name="answer" value="<%= question[i].answer %> ">
+                            <label for="choice1">Answer</label>
+                        </div>
+                        <div class="container center ">
+                            <hr class="red">
+                            <button class="btn wave-effect" id=update type="submit">Update Question</button>
+                        </div>
+                    </form>
+                    <% } %>   
+                <% } %>    
+        </ul>
+    </div>
+</body>
+</html>
